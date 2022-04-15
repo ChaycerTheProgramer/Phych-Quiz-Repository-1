@@ -6,7 +6,7 @@ var title = document.getElementById("title");
 title.addEventListener("click", titleChange);
 
 function titleChange(){
-	if(title.color = "Blue") {
+	if(title.color = "blue") {
 		title.style.color = "red";	
 	} else {
 		title.style.color = "blue";
