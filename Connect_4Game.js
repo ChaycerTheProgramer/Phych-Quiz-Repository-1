@@ -1,11 +1,11 @@
 //Site Variables
-var Mtitle = document.getElementById("title");
+var title = document.getElementById("title");
 //Function Variables
 
 //Eventlisteners
-Mtitle.addEventListener("click", MtitleChange);
+title.addEventListener("click", titleChange);
 
-function MtitleChange(){
+function titleChange(){
 	if(title.color = "Blue") {
 		title.style.color = "red";	
 	} else {
