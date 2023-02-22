@@ -1,4 +1,13 @@
-#title {
+#MainTitleScreen {
 	color:blue;
 	align:center;
+}
+#MainTitleTxt {
+	
+}
+#MainTitleBtn {
+	
+}
+#MainQuiz {
+	display:none;
 }

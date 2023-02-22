@@ -1,17 +1,19 @@
 //Site Variables
-var titleM = document.getElementById("title");
-
+var StartBtn = document.getElementById("StartBtn");
+var MainTitleTxt = document.getElementById("MainTitleTxt");
 //Function Variables
-var titleC = titleM.style.color;
-
+var QuestNum = 0;
+var AnsIndex[];
 //Eventlisteners
-title.addEventListener("click", titleChange);
+StartBtn.addEventListener("click", Quiz);
 
-//functions
-function titleChange(){
-	if(titleC == "blue") {
-		titleC = "red";	
-	} else if(titleC == "red") {
-		titleC = "blue";
-	};
-};
+//Main Loop
+
+//Functions
+function Quiz() {
+	
+}
+//Question Index
+
+//Awnser Index
+var Ans[] = "Ans1","Ans2","Ans3","Ans4","Ans5","Ans6";
