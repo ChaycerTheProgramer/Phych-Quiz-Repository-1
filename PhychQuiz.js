@@ -1,17 +1,20 @@
 //Site Variables
 var StartBtn = document.getElementById("StartBtn");
 var MainTitleTxt = document.getElementById("MainTitleTxt");
+var MainTitleScreen = document.getElementById("MainTitleScreen");
+var MainQuiz = document.getElementById("MainQuiz");
 //Function Variables
 var QuestNum = 0;
 var AnsIndex[];
 //Eventlisteners
-StartBtn.addEventListener("click", Quiz);
+StartBtn.addEventListener("click", StartQuiz);
 
 //Main Loop
 
 //Functions
-function Quiz() {
-	
+function StartQuiz() {
+	MainTitleScreen.style.display = none;
+	MainQuiz.style.display = initial; 
 }
 //Question Index
 
