@@ -13,8 +13,8 @@ StartBtn.addEventListener("click", StartQuiz);
 
 //Functions
 function StartQuiz() {
-	MainTitleScreen.style.display = none;
-	MainQuiz.style.display = initial; 
+	MainTitleScreen.style.display = "none";
+	MainQuiz.style.display = "initial"; 
 }
 //Question Index
 
