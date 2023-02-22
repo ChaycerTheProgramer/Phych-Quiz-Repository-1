@@ -5,7 +5,6 @@ var MainTitleScreen = document.getElementById("MainTitleScreen");
 var MainQuiz = document.getElementById("MainQuiz");
 //Function Variables
 var QuestNum = 0;
-
 //Eventlisteners
 StartBtn.addEventListener("click", StartQuiz);
 
