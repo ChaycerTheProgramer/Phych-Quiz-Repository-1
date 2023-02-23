@@ -6,8 +6,13 @@ var QuestionTxt = document.getElementById("Question");
 //Function Variables
 var QuizLength = 0;
 var History = [];
+var Num = undefined;
+var Num2 = undefined;
+var correct = 0;
+var incorrect = 0;
 //Button Variables
 var StartBtn = document.getElementById("StartBtn");
+var Ans = document.getElementsByClassName("Ans");
 var Opt1 = document.getElementById("Opt1");
 var Opt2 = document.getElementById("Opt2");
 var Opt3 = document.getElementById("Opt3");
@@ -19,7 +24,8 @@ Opt2.addEventListener("click", check);
 Opt3.addEventListener("click", check);
 Opt4.addEventListener("click", check);
 //Main Loop
-var RNG = Math.floor(Math.random()*10)
+var RNG = Math.floor(Math.random()*10);
+var RNG2 = Math.floor(Math.random()*4);
 //Functions
 function StartQuiz() {
 	MainTitleScreen.style.display = "none";
@@ -27,26 +33,33 @@ function StartQuiz() {
 	MainQuiz();
 }
 function MainQuiz() {
-	for (i=0; i<=QuizLength; i++) {
-		var question = QuestIndex[RNG]
-		repeatCheck()
-		if (question == History[i]) {
-			
-		} else {
-			QuestionTxt.innerHTML = QuestionIndex[question];
-			History.push(question);
+	for (i=0; i<=QuizLength;) {
+		num = RNG;
+		var question = QuestIndex[Num];
+		for (k=0; k <= History.length; k++) {
+			if (question == History[i]) {
+				i--
+			} else {
+				QuestionTxt.innerHTML = question;
+				Num = RNG2;
+				Ans[Num2].innerHTML = AnsIndex[question];
+			}
 		}
 	}
 }
-function repeatCheck() {
-	for (i=0; i <= History.length; i++) {
-		if (question == History[i]) {
-			
-		}
+function GenAns() {
+	for (j=1; j<=3; j++ ) {
+		
 	}
 }
 function check() {
-	
+	if (Num == Num2) {
+		correct++
+		i++
+	} else {
+		incorrect++
+		i++
+	}
 }
 //Question Index
 var QuestIndex = ["Question_1-eg","Question_2-eg","Question_3-eg","Question_4-eg",];
