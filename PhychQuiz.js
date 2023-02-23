@@ -3,6 +3,7 @@ var MainTitleTxt = document.getElementById("MainTitleTxt");
 var MainTitleScreen = document.getElementById("MainTitleScreen");
 var MainQuiz = document.getElementById("MainQuiz");
 var QuestionTxt = document.getElementById("Question");
+QuestionTxt.innerHTML = "QuestionTxt_Test";
 //Function Variables
 var QuizLength = 0;
 var History = [];
