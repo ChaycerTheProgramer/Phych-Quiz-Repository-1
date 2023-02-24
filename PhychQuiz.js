@@ -11,6 +11,9 @@ var Num = undefined;
 var Num2 = undefined;
 var correct = 0;
 var incorrect = 0;
+var tempCorrectA = undefined;
+var tempCorrectQ = undefined;
+
 //Button Variables
 var StartBtn = document.getElementById("StartBtn");
 var Ans = document.getElementsByClassName("Ans");
@@ -31,42 +34,45 @@ var RNG2 = Math.floor(Math.random()*4);
 function StartQuiz() {
 	MainTitleScreen.style.display = "none";
 	MainQuiz.style.display = "initial"; 
-	MainQuiz();
+	MainQz();
 }
-function MainQuiz() {
-	for (i=0; i<=QuizLength;) {
-		num = RNG;
-		var question = QuestIndex[Num];
-		for (k=0; k <= History.length; k++) {
-			if (question == History[i]) {
-				i--
-			} else {
-				QuestionTxt.innerHTML = question;
-				Num = RNG2;
-				Ans[Num2].innerHTML = AnsIndex[question];
-			}
+function MainQz() {
+	Num = RNG;
+	tempCorrectQ = Num;
+	var question = QuestIndex[Num];
+	for (k=0; k <= History.length; k++) {
+		if (question == History[k]) {
+			k--
+		} else {
+			QuestionTxt.innerHTML = question;
+			Num2 = RNG2;
+			tempCorrectA = Num2;
+			Ans[Num2].innerHTML = AnsIndex[Num];	
+		}
+	}
+	for (j=0; j<=3; j++) {
+		var temp = Math.floor(Math.random()*14) + j;
+		if (j == Num2) {
+		} else {
+			Ans[j].innerHTML = AnsIndex[temp];
 		}
 	}
 }
-function GenAns() {
-	for (j=1; j<=3; j++ ) {
-		
-	}
-}
 function check() {
-	if (Num == Num2) {
+	if (tempCorrectA == tempCorrectQ) {
 		correct++
-		i++
 	} else {
 		incorrect++
-		i++
 	}
+	MainQz();
 }
 //Question Index
-var QuestIndex = ["Question_1-eg","Question_2-eg","Question_3-eg","Question_4-eg",];
+var QuestIndex = ["Question_1-eg","Question_2-eg","Question_3-eg",
+"Question_4-eg","Question_5-eg","Question_6-eg","Question_7-eg","Question_8-eg",
+"Question_9-eg","Question_10-eg"];
 //Awnser Index
 var AnsIndex  = ["Ans_1-eg","Ans_2-eg","Ans_3-eg","Ans_4-eg",
 "Ans_5-eg","Ans_6-eg","Ans_7-eg",
 "Ans_8-eg","Ans_9-eg","Ans_10-eg","Ans_11-eg","Ans_12-eg",
 "Ans_13-eg","Ans_14-eg","Ans_15-eg","Ans_16-eg","Ans_17-eg",
-"Ans_18-eg",];
+"Ans_18-eg",]; 
